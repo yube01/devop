@@ -30,7 +30,7 @@ resource "azurerm_subnet" "internal" {
   address_prefixes     = ["10.0.2.0/24"]
 }
 
-# Create public IPs
+
 resource "azurerm_public_ip" "main" {
   name                = "my-ip"
   location            = azurerm_resource_group.main.location
@@ -38,7 +38,7 @@ resource "azurerm_public_ip" "main" {
   allocation_method   = "Dynamic"
 }
 
-# Create Network Security Group and rule
+
 resource "azurerm_network_security_group" "main" {
   name                = "test-security"
   location            = azurerm_resource_group.main.location
