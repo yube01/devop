@@ -42,6 +42,8 @@ kubectl get pods -w [watch mode]
 
 kubectl delete deploy [deployment yaml file]
 
+kubectl get svc [listing service yaml status]
+
 
 
 
