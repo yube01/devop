@@ -1,0 +1,7 @@
+appName: test-helm
+
+image:
+  name: yube001/portfolio
+  tag: v1
+
+replicas: 1

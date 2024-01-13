@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: react
+  name: {{ .Values.appName}}
   labels:
-    app: react
+    app: {{ .Values.appName}}
 spec:
-  replicas: 3
+  replicas: {{ .Values.replicas}}
   selector:
     matchLabels:
-      app: react
+      app: {{ .Values.appName}}
   template:
     metadata:
       labels:
-        app: react
+        app: {{ .Values.appName}}
     spec:
       containers:
       - name: portfolio
-        image: yube001/portfolio:v1
+        image: "{{ .Values.image.name}}:{{ .Values.image.tag}}"
         ports:
         - containerPort: 8000

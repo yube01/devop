@@ -46,5 +46,10 @@ kubectl get svc [listing service yaml status]
 
 
 
+-------------------------------------------------------
+
+
+azure -> az aks get-credentials --resource-group [resource group name]  --name [cluster name]
+
 
 
